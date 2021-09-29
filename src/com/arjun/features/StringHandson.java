@@ -1,6 +1,8 @@
 package com.arjun.features;
 
+import java.util.Arrays;
 import java.util.Locale;
+import java.util.stream.IntStream;
 
 public class StringHandson {
 
@@ -22,6 +24,27 @@ public class StringHandson {
         System.out.println("regionMatches(2,cent,0,4)" + s.regionMatches(2, "cent", 0, 4));
         System.out.println("startsWith(Acc) - " + s.startsWith("Acc"));
         System.out.println("Locale.ENGLISH - " + Locale.ENGLISH);
+
+
+
+        int firstEvenDoubleDivBy3 = IntStream.range(100, 200).map(n -> n * 2).filter(n->n%3==0).findFirst().orElse(0);
+
+        String[] strings = "this is an array of strings".split(" ");
+        int sum= Arrays.stream(strings)
+                .mapToInt(String::length)
+                .sum();
+
+
+        System.out.println(sum);
+
+        String s1="Arjun";
+        String backward=new StringBuilder(s).reverse().toString();
+        if(s1.equals(backward)){
+            System.out.println("Palindrome");
+        }else{
+            System.out.println("Not Palindrome");
+        }
+
           /*   System.out.println(""+);
              System.out.println(""+);
               System.out.println(""+); System.out.println(""+);

@@ -1,4 +1,4 @@
-package com.arjun.others;
+package com.arjun.data.structures;
 
 public class StackDemoMain {
 

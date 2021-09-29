@@ -1,4 +1,4 @@
-package com.arjun.others;
+package com.arjun.puzzles;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -12,12 +12,12 @@ public class FourthElementInLinkedListMain {
 
     public static void main(String[] args) {
         List<Integer> list = new LinkedList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
-        list.add(5);
-        list.add(6);
+        list.add(1);        //0
+        list.add(2);        //1
+        list.add(3);        //2
+        list.add(4);        //3
+        list.add(5);        //4
+        list.add(6);        //5
 
 
         Iterator itrFirst = list.iterator();

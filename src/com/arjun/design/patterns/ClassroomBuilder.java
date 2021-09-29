@@ -1,4 +1,4 @@
-package com.arjun.others;
+package com.arjun.design.patterns;
 
 public class ClassroomBuilder {
     private int numberOfStudents;

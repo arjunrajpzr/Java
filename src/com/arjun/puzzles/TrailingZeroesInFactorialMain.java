@@ -1,13 +1,13 @@
-package com.arjun.others;
+package com.arjun.puzzles;
 
 public class TrailingZeroesInFactorialMain {
     /**
-     *For an integer N find the number of trailing zeroes in N!.
-     *
-     ** Hint: Zero comes with 2*5 or 10
-     *
+     * For an integer N find the number of trailing zeroes in N!.
+     * <p>
+     * * Hint: Zero comes with 2*5 or 10
+     * <p>
      * Example 1:
-     *
+     * <p>
      * Input:
      * N = 5
      * Output:
@@ -15,21 +15,20 @@ public class TrailingZeroesInFactorialMain {
      * Explanation:
      * 5! = 120 so the number of trailing zero is 1.
      * Example 2:
-     *
-     *
+     * <p>
+     * <p>
      * Input:
      * N = 4
      * Output:
      * 0
      * Explanation:
      * 4! = 24 so the number of trailing zero is 0.
-     *
+     * <p>
      * Expected Time Complexity: O(logN)
      * Expected Auxiliary Space: O(1)
-     *
+     * <p>
      * Constraints:
      * 1 <= N <= 109
-     *
      */
     static int trailingZeroes(int N) {
        /* // Write your code here
@@ -57,17 +56,17 @@ public class TrailingZeroesInFactorialMain {
 
         return count;*/
 
-        int j=5;
-        int ans=0;
-        while(j<=N)
-        {
-            ans+= N/j;
-            j=j*5;
+        int j = 5;
+        int ans = 0;
+        while (j <= N) {
+            ans += N / j;
+            j = j * 5;
         }
         return ans;
     }
 
     public static void main(String[] args) {
-        System.out.println(TrailingZeroesInFactorialMain.trailingZeroes(10));
+
+        System.out.println(TrailingZeroesInFactorialMain.trailingZeroes(30));
     }
 }
