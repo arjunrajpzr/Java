@@ -1,16 +1,16 @@
 package com.arjun.business;
 
-public class Employee {
+public class EmployeeWithComparable implements Comparable<EmployeeWithComparable> {
 
     private int id;
     private String name;
     private int age;
 
-    public Employee(String name) {
+    public EmployeeWithComparable(String name) {
         this.name = name;
     }
 
-    public Employee(int id, String name, int age) {
+    public EmployeeWithComparable(int id, String name, int age) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -48,5 +48,10 @@ public class Employee {
                 ", age=" + age +
                 '}';
     }
-}
 
+    @Override
+    public int compareTo(EmployeeWithComparable emp) {
+        return this.id - emp.id;
+    }
+
+}
