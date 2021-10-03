@@ -1,6 +1,9 @@
 package com.arjun.puzzles;
 
 
+import com.arjun.features.ArjunArtifact;
+import java.lang.Class;
+
 import java.util.Arrays;
 
 //@formatter:off
@@ -18,7 +21,7 @@ import java.util.Arrays;
  *
  */
 //@formatter:on
-
+@ArjunArtifact("SandGlassPattern")
 public class SandGlassPatternMain {
     public static void main(String[] args) {
         char[][] sandGlassPattern = new char[10][5];
@@ -36,7 +39,7 @@ public class SandGlassPatternMain {
 
         for (i = 0; i < 10; i++) {
             for (j = 0; j < 5; j++) {
-                System.out.print(sandGlassPattern[i][j]+" ");
+                System.out.print(sandGlassPattern[i][j] + " ");
             }
             System.out.println("");
         }

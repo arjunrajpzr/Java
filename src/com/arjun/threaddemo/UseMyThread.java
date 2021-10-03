@@ -10,7 +10,6 @@ public class UseMyThread {
                 .map(MyThread::new)
                 .limit(10)
                 .collect(Collectors.toList());
-
         threads.forEach(MyThread::start);
     }
 
