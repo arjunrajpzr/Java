@@ -23,7 +23,7 @@ public class ClassroomBuilder {
         private int numberOfFans;
         private int numberOfBlackBoards;
 
-        public Builder newInstance() {
+        public static Builder newInstance() {
             return new Builder();
         }
 
@@ -59,5 +59,17 @@ public class ClassroomBuilder {
         public ClassroomBuilder build() {
             return new ClassroomBuilder(this);
         }
+
+    }
+
+    @Override
+    public String toString() {
+        return "ClassroomBuilder{" +
+                "numberOfStudents=" + numberOfStudents +
+                ", numberOfBenches=" + numberOfBenches +
+                ", numberOfDesks=" + numberOfDesks +
+                ", numberOfFans=" + numberOfFans +
+                ", numberOfBlackBoards=" + numberOfBlackBoards +
+                '}';
     }
 }

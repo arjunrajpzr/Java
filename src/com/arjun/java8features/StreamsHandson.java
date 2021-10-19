@@ -9,6 +9,9 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.counting;
+import static java.util.stream.Collectors.groupingBy;
+
 public class StreamsHandson {
 
 
@@ -86,13 +89,28 @@ public class StreamsHandson {
 
         Set<String> animalSet = animals.stream().collect(Collectors.toSet());
 
+
         System.out.println("Set datastructure: " + animalSet);
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        List<String> str = getPalindrome(Files.lines(Paths.get("C:/Users/ARBHA/Documents/PalindromeTest.txt")), 5);
+        List<String> str = getPalindrome(Files.lines(Paths.get("C:/Users/ARBHA/Documents/Data/PalindromeTest.txt")), 5);
 
         System.out.println("Palindrome - " + str);
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        List<String> strings = List.of("one","two","three","four");
+
+        System.out.println("Creating a map from list");
+        var map = strings.stream()
+                .collect(groupingBy(String::length, counting()));
+        map.forEach((key, value) -> System.out.println(key + " :: " + value));
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
     }
 
     private static List<String> getPalindrome(Stream<String> stream, int length) {
