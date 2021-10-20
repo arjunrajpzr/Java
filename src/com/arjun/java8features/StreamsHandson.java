@@ -20,7 +20,6 @@ public class StreamsHandson {
         List<String> animals = Arrays.asList("Monkey", "Lion", "Giraffe", "Limor", "Lion", "Limor");
 
         List<String> distinctAnimals = animals.stream().distinct().collect(Collectors.toList());
-
         Integer[] intArray = new Integer[]{1, 2, 3, 4, 5};
 
         Stream<Integer> intStr=Stream.of(intArray);

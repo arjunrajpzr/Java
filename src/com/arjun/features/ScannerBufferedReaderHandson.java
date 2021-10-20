@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 /**
  * In Scanner class if we call nextLine() method after any one of the seven nextXXX() method then the nextLine() does not read values from console and cursor will not come
@@ -39,5 +40,7 @@ public class ScannerBufferedReaderHandson {
         String b2 = bufferedReader.readLine();
         System.out.printf("You have entered:- " + a2 +
                 " and name as " + b2);
+
+
     }
 }
